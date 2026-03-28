@@ -1,0 +1,61 @@
+📌 Data Types
+🔹 Primitive (Immutable)
+string
+number
+boolean
+undefined
+null
+bigint
+symbol
+
+👉 Stored by value
+🔹 Non-Primitive
+Object
+Array
+Function
+
+👉 Stored by reference
+JavaScript is dynamically typed
+let & const are block scoped
+var is function scoped (avoid)
+TDZ applies to let & const
+Primitives are immutable
+Objects are mutable
+Objects are passed by reference
+Primitives are passed by value
+typeof null === "object" (JS bug)
+Arrays & functions are objects
+Symbol() always returns unique value
+BigInt used for large integers
+
+
+
+ //let name="ANMOL";
+//let age=20;
+//const pi=3.14;
+
+
+//console.log(name ,age);
+//console.log(pi);
+//let c="ANMOL";
+//let d="HELLO WORLD";
+//console.log(c);
+//console.log(d);
+//let num=1234567899753n;
+//console.log(num);
+//const id=Symbol("id");
+//console.log(id);
+//const id2=Symbol("id");
+//console.log(id2);
+//console.log(id==id2);
+//function add(a,b){
+   // return a+b;
+//}
+//console.log(add(5,10));
+//types of all non primatives datstypes is object.
+//let arr=[1,2,3,4,5];
+//console.log(typeof arr);
+// primitives are immutable and non primitives are mutable.
+let str="ANMOL";
+str[0]="a";
+console.log(str);
