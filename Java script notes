@@ -59,3 +59,78 @@ BigInt used for large integers
 let str="ANMOL";
 str[0]="a";
 console.log(str);
+
+
+DAY-02:-
+
+
+
+// arithmetic operators
+console.log(2+3);
+console.log(5**5);
+
+
+// assignment operators
+let a = 10;
+a += 5;
+a-=3;
+console.log(a);
+console.log(a);
+
+// comparison operators
+
+
+let x=5;
+let y=10;
+console.log(x>y);
+console.log(x<y);
+console.log(x==y);
+console.log(x!=y);
+
+
+let str1 = "Hello";
+let str2 = "World";
+console.log(str1 + " " + str2);
+
+
+
+let str="127";
+let num=Number(str);
+console.log(num);
+
+
+
+let A=20;
+let B="20";
+console.log(A==B);//just compares the value irrespective of the type
+console.log(A===B);// first compares the type and then the value
+
+
+
+// null is loosly equal to undefined but not strictly equal
+console.log(null == undefined);
+console.log(null === undefined);
+
+// when there is sign like >,<,>=,<= then(null is treated as 0 and undefined is treated as NaN)
+console.log(null > 0); // false
+console.log(null >= 0); // true
+console.log(undefined > 0); // false
+console.log(undefined >= 0); // false
+
+
+//loops
+
+for(let i=0; i<10; i++){
+    console.log(i);
+}
+
+
+//if else
+
+    let b=15;
+    if(b>=18){
+        console.log("you are an adult");
+    }
+    else{
+        console.log("you are a minor");
+    }
