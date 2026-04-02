@@ -134,3 +134,129 @@ for(let i=0; i<10; i++){
     else{
         console.log("you are a minor");
     }
+
+
+
+DAY -03 : STRINGS AND ARRAY
+
+
+
+
+//const str1=`A big tech is waiting 
+//for you to jion them`;
+//console.log(str1);
+//const day=5;
+    //const str2=`Today is day ${day} of the month`;
+//console.log(str2.toUpperCase());
+
+
+//const str3=`   Hello World!   `;
+//console.log(str3.indexOf('World'));
+
+//console.log(str3.indexOf('Wold'));
+
+
+//const a=`ANMOL ARYA`;
+//const b=`ANMOL ARYA`;
+//console.log(a+" "+b);
+
+
+//const str3=`   Hello World!   `;
+//console.log(str3.trim());
+
+
+
+// splitting array
+
+//const names=`Anmol Arya, Anshul Arya, Anshul Arya, Anshul Arya`;
+//const namesArray=names.split(', ');
+//console.log(namesArray); 
+
+
+//const now=new Date();
+//console.log(now);
+
+//console.log(now.getDay());
+//console.log(now.getDate());
+
+
+
+let marks=[45,67,89,90,56];
+console.log(marks);
+console.log(marks.length);
+
+
+// array can contain different types of data
+let mixedArray=[45,'Anmol',true,null,undefined];
+console.log(mixedArray);
+
+mixedArray[2]=90;
+console.log(mixedArray);
+
+
+// array opertaions
+
+
+// push
+marks.push(100);
+console.log(marks);
+
+// pop
+marks.pop();
+console.log(marks);
+
+//unshift: add element at the beginning of the array
+marks.unshift(40);
+console.log(marks);
+//shift: remove element from the beginning of the array
+marks.shift();
+console.log(marks);
+
+// since due to shift of large amount of data in the array, it is not recommended to use shift and unshift in large arrays. It is better to use push and pop for adding and removing elements from the end of the array.
+
+
+for(let i=0; i<marks.length; i++){
+    console.log(marks[i]);
+}
+
+//non primitive (objects) is copied by reference(we can change the value of the original array by changing the value of the copied array)
+// primitive data types are copied by value(we cannot change the value of the original variable by changing the value of the copied variable)
+
+
+
+// difference between slice and splice
+
+// slice: it is used to extract a portion of the array and returns a new array. It does not modify the original array.
+// splice: it is used to add or remove elements from the array. It modifies the original array.
+
+const arr1=[1,2,3,4,5];
+const arr2=arr1.slice(1,4);
+console.log(arr1);
+console.log(arr2);
+
+
+const arr3=[1,2,3,4,5];
+arr3.splice(1,2);
+console.log(arr3);
+
+// spread operator: it is used to spread the elements of an array or object. It is denoted by three dots (...).
+const arr4=[1,2,3];
+    const arr5=[...arr4,4,5];
+    console.log(arr5);
+
+
+
+    const names=['Anmol','Amit','Bob','Dev'];
+    names.sort();
+    console.log(names);
+
+
+    const a=[34,56,78,101,99];
+    a.sort();
+   
+    console.log(a); // it sorts the array in lexicographical order
+
+    a.sort((x,y)=>{
+        return x-y; // it sorts the array in ascending order
+    });
+    console.log(a); 
