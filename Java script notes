@@ -260,3 +260,143 @@ const arr4=[1,2,3];
         return x-y; // it sorts the array in ascending order
     });
     console.log(a); 
+
+
+
+DAY -04
+
+
+
+
+
+
+// OBJECT
+
+const user={
+    name:'John',
+    age:30,
+    emailid:`john@example.com`,
+    amount:1000
+
+}
+console.log(user);
+console.log(user.name);
+console.log(user.age);
+console.log(user.emailid);
+console.log(user.amount);
+
+// CRUD operations: create, read, update, delete
+
+user.name='Jane'; // update 
+console.log(user.name);
+
+delete user.amount; // delete
+console.log(user.amount); // undefined 
+
+console.log(Object.keys(user)); // ['name', 'age', 'emailid']
+console.log(Object.values(user)); // ['Jane', 30, 'john@example.com']
+
+
+
+const{name,age,emailid}=user; // destructuring
+console.log(name); // Jane
+console.log(age);       
+
+const temp=Object.keys(user);
+for(let keys of temp){   // for of loop for keys
+    console.log(keys); // name, age, emailid
+}
+
+
+
+
+
+// FUNCTION
+
+function ne(){
+    console.log("This is a  function.");
+}
+ne();
+
+
+//function add(a,b){
+    //const sum= a+b;
+   // console.log(sum);
+//}
+//add(5,10); // 15
+
+
+//REST OPERATOTR
+function addn(...nums){
+    let sum=0;
+    for(let n of nums){
+        sum+=n;
+    }
+    console.log(sum);
+}
+
+addn(2,3,4,5,6,7,8);
+
+
+
+// DIFFERENCE BTW REST AND SPREAD OPERATOR
+// REST OPERATOR: used in function parameters to gather multiple arguments into an array
+// SPREAD OPERATOR: used to spread elements of an array or object into individual elements
+
+const arr1=[1,2,3];
+const arr2=[4,5,6];
+const combined=[...arr1,...arr2]; // spread operator to combine arrays
+console.log(combined); // [1,2,3,4,5,6]
+
+
+const addnumbur=function(num1,num2){
+    return num1+num2;
+}
+
+console.log(addnumbur(4,5));
+
+
+// ARROW FUNCTION   
+
+//const raw=()=>{
+    //console.log("This is an arrow function.");
+//}
+//raw();
+
+//const addnumbur2=(num1,num2)=>{
+   // return num1+num2;
+//}
+//console.log(addnumbur2(10,20));
+
+
+const addnumbur3=(num1,num2)=> num1+num2; // implicit return
+console.log(addnumbur3(15,25));
+
+
+const multinumbur3=(num1,num2)=> num1*num2; 
+console.log(multinumbur3(5,6));
+
+const greeting =()=>({name:'John',age:30}); // returning an object from arrow function
+console.log(greeting()); // {name: 'John', age: 30}
+
+//IIFE (Immediately Invoked Function Expression)
+(function(){
+    console.log("This is an IIFE.");
+})(); 
+
+
+// CAllBACK FUNCTION
+
+
+function greet(){
+    console.log("hello world");
+}
+
+function callgreet(callback){
+    console.log("Calling the callback function...");
+    callback();
+}
+
+
+callgreet(greet); // Calling the callback function...
+                 // hello world
