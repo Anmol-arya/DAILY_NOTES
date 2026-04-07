@@ -400,3 +400,93 @@ function callgreet(callback){
 
 callgreet(greet); // Calling the callback function...
                  // hello world
+
+
+
+
+
+//how js code runs in the background
+
+//memory creation phase
+//a=undefined for var a if there is let/const instead of var then it will be in temporal dead zone until it is declared
+//b=undefined for var b if there is let/const instead of var then it will be in temporal dead zone until it is declared
+//addNUM= function definition
+    //execution phase
+
+
+
+
+console.log(a); // undefined
+
+var a=10;
+
+var b=20;
+var sumres=addNUM(a,b);
+console.log(sumres); // 30
+
+function addNUM(num1,num2){
+    var sum = num1+num2;
+    return sum;
+}
+
+
+console.log(addNUM(a,b)); // 30
+
+// hoisting is a javascript behaviour of knowing variable and function declarations before executing the code.
+// variables declared with var are hoisted and initialized with undefined, while let and const are hoisted but not initialized, leading to a temporal dead zone until they are declared.
+
+
+
+
+
+// SCOPE AND CLOSURE ,HOF
+
+//SCOPE : 1.global  2.local  3.block
+
+
+
+function create(){
+    let cnt=0;
+    function inner(){
+        cnt++;
+        return cnt;
+    }
+    return inner;
+}
+
+const counter=create();
+console.log(counter());
+
+
+
+function outer(){
+
+    let balance=500;
+
+
+    const user={
+    deposit: function(amount){
+        if(typeof amount==="number" && amount>0){
+            balance+=amount;
+            return balance;
+        }
+    },
+    withdraw: function(amount){
+        if(typeof amount==="number" && amount>0 && amount<=balance){
+            balance-=amount;
+            return balance;
+        }    },
+    getBalance: function(){
+        return balance;
+    }
+
+
+}
+return user;
+}
+const customer=outer();
+console.log(customer.getBalance()); // 500
+console.log(customer.deposit(200));
+
+
+// 
