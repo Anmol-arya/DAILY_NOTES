@@ -490,3 +490,81 @@ console.log(customer.deposit(200));
 
 
 // 
+
+
+
+
+// forEach ,filter,reducer,map,set
+
+// forEach
+const arr = [1, 2, 3, 4, 5];
+ arr.forEach((number,index)=>{
+    console.log(number, index);
+ })
+
+// filter
+const evenNumbers=arr.filter(num=>num%2===0);
+console.log(evenNumbers); // [2,4]
+
+
+
+arr.filtering = function(compare){
+    const ans=[];
+    for (let num of this){
+        if(compare(num)){
+            ans.push(num);
+        }
+    }
+    return ans;
+}
+const oddNumbers=arr.filtering(num=>num%2!==0);
+console.log(oddNumbers); // [1,3,5]
+
+
+//map
+
+const squarenumber=arr.map(num=>num*num);
+console.log(squarenumber); // [1,4,9,16,25]
+
+
+
+const products = [
+    { name: "Laptop", price: 50000, inStock: true },
+    { name: "Phone", price: 20000, inStock: false },
+    { name: "Tablet", price: 30000, inStock: true },
+    { name: "Headphones", price: 2000, inStock: true }
+];
+
+
+
+const pro=products.filter((product)=>product.price<=30000);
+console.log(pro);
+
+
+
+
+
+
+const pra=products.filter((product)=>product.price>50).sort((a,b)=>a.price-b.price);
+console.log(pra);
+
+
+    const ans=products.map((products=>({ name:products.name,price:products.price})));
+console.log(ans);
+
+
+//REDUCE
+
+const price= products.reduce((total,product)=>total+product.price,0);
+console.log(price); // 102000
+
+// map
+
+const m1=new Map([
+    ['name','John'],
+    ['age',30],
+    ['city','New York']
+])
+
+
+console.log(m1);
